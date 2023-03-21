@@ -38,12 +38,13 @@ function App() {
           value={inputDescription}
           onChange={(e) => setInputDescription(e.target.value)}
         />
-        <button type="submit" onClick={addTask(inputTitle, inputDescription)}>
+        <button onClick={() => addTask(inputTitle, inputDescription)}>
           Ajouter
         </button>
       </form>
       <h2>choses à faire</h2>
       <ul>
+        <li>tache</li>
         {list.map((task) => (
           <li key={task.id}>
             {task.title}
