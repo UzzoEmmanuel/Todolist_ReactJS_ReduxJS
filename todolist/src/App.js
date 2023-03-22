@@ -24,27 +24,24 @@ function App() {
   return (
     <div>
       <h1>Todolist bien stressante</h1>
-      <form>
-        <h2>Chose à ajouter</h2>
-        <input
-          type="text"
-          placeholder="titre"
-          value={inputTitle}
-          onChange={(e) => setInputTitle(e.target.value)}
-        />
-        <input
-          type="text"
-          placeholder="description"
-          value={inputDescription}
-          onChange={(e) => setInputDescription(e.target.value)}
-        />
-        <button onClick={() => addTask(inputTitle, inputDescription)}>
-          Ajouter
-        </button>
-      </form>
+      <h2>Chose à ajouter</h2>
+      <input
+        type="text"
+        placeholder="titre"
+        value={inputTitle}
+        onChange={(e) => setInputTitle(e.target.value)}
+      />
+      <input
+        type="text"
+        placeholder="description"
+        value={inputDescription}
+        onChange={(e) => setInputDescription(e.target.value)}
+      />
+      <button onClick={() => addTask(inputTitle, inputDescription)}>
+        Ajouter
+      </button>
       <h2>choses à faire</h2>
       <ul>
-        <li>tache</li>
         {list.map((task) => (
           <li key={task.id}>
             {task.title}
