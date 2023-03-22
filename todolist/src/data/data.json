@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "ménage",
+    "description": "aspirateur + poussière",
+    "état": false
+  },
+  {
+    "id": 2,
+    "title": "vaisselle",
+    "description": "",
+    "état": false
+  },
+  {
+    "id": 3,
+    "title": "emails",
+    "description": "banque + pôle emploi",
+    "état": false
+  }
+]
