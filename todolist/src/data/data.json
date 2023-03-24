@@ -3,18 +3,18 @@
     "id": 1,
     "title": "ménage",
     "description": "aspirateur + poussière",
-    "état": false
+    "checked": false
   },
   {
     "id": 2,
     "title": "vaisselle",
     "description": "",
-    "état": false
+    "checked": false
   },
   {
     "id": 3,
     "title": "emails",
     "description": "banque + pôle emploi",
-    "état": false
+    "checked": false
   }
 ]
