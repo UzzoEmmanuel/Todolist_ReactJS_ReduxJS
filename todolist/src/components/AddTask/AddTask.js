@@ -8,10 +8,19 @@ const AddTask = () => {
 
   const dispatch = useDispatch();
 
-  const handleAddNewTask = (e) => {
-    e.preventDefault();
-    dispatch(addNewTask({ title: title, decription: description }));
+  const onlyWhiteSpace = (title) => title.trim().length === 0;
+
+  const handleAddNewTask = (event) => {
+    event.preventDefault();
+    if (onlyWhiteSpace(title)) {
+      alert("une tâche doit avoir un titre");
+      event.target.reset();
+    } else {
+      dispatch(addNewTask({ title: title, decription: description }));
+      event.target.reset();
+    }
   };
+
   return (
     <section>
       <h2>Tâche à ajouter:</h2>
@@ -19,12 +28,15 @@ const AddTask = () => {
         <input
           type="text"
           placeholder="titre"
-          onInput={(e) => setTitle(e.target.value)}
+          required
+          title={title}
+          onInput={(event) => setTitle(event.target.value)}
         />
         <input
           type="text"
           placeholder="description"
-          onInput={(e) => setDescription(e.target.value)}
+          description={description}
+          onInput={(event) => setDescription(event.target.value)}
         />
         <button type="submit">Ajouter</button>
       </form>

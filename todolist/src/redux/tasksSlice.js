@@ -2,31 +2,34 @@ import { createSlice } from "@reduxjs/toolkit";
 import data from "../data/data";
 
 const initialState = data;
+// const initialState = [];
 
 const taskSlice = createSlice({
   name: "tasks",
   initialState,
 
   reducers: {
-    addNewTask: (state, action) => {
-      const task = {
-        id: Math.random() * 100,
+    addNewTask: (state = initialState, action) => {
+      const newTask = {
+        id: Math.floor(Math.random() * 1000),
         title: action.payload.title,
         description: action.payload.decription,
         checked: false,
       };
-      state.push(task);
-
-      console.log(state);
-      console.log(task);
+      state.unshift(newTask);
     },
 
     checkTask: (state, action) => {
-      state = state.push(state.splice(action, 1)[0]);
+      const index = state.findIndex((task) => task.id === action.payload.id);
+      state[index].checked = action.payload.checked;
+    },
+
+    deleteTask: (state, action) => {
+      return state.filter((task) => task.id !== action.payload.id);
     },
   },
 });
 
-export const { addNewTask, checkTask } = taskSlice.actions;
+export const { addNewTask, checkTask, deleteTask } = taskSlice.actions;
 
 export default taskSlice.reducer;
