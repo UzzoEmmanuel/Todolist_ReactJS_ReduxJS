@@ -1,0 +1,15 @@
+.error {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &_container {
+    padding: 1.5rem;
+    border: 2px solid $color-primary;
+    border-radius: 10px;
+    background-color: $color-white;
+    &__text {
+      margin-bottom: 2.5px;
+    }
+  }
+}

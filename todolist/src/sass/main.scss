@@ -1,1 +1,16 @@
+@import "./utils/variables";
+@import "./utils/mixins";
 
+@import "./base/base";
+@import "./base/typography";
+
+@import "./pages/homepage";
+@import "./pages/taskpage";
+@import "./pages/errorpage";
+
+@import "./components/header";
+@import "./components/addtask";
+@import "./components/tasklist";
+@import "./components/task";
+@import "./components/taskcard";
+@import "./components/error";

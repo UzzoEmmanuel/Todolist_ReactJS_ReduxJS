@@ -20,25 +20,23 @@ const Task = ({ id, title, description, checked }) => {
     dispatch(deleteTask({ id }));
   };
   return (
-    <li>
-      <div>
-        <span>
-          <input
-            type="checkbox"
-            onClick={handleCheckTask}
-            checked={checked}
-          ></input>
-          <button
-            style={{ textDecoration: checked && "line-through" }}
-            onClick={() => sendTaskData()}
-          >
-            {title}
-          </button>
-        </span>
-        <button className="btn btn-danger" onClick={handleDeleteTask}>
-          X
-        </button>
-      </div>
+    <li className="task">
+      <input
+        className="task_checkinput"
+        type="checkbox"
+        onClick={handleCheckTask}
+        checked={checked}
+      ></input>
+      <button
+        className="task_taskbutton"
+        style={{ textDecoration: checked && "line-through" }}
+        onClick={() => sendTaskData()}
+      >
+        {title}
+      </button>
+      <button className="task_deletebutton" onClick={handleDeleteTask}>
+        X
+      </button>
     </li>
   );
 };

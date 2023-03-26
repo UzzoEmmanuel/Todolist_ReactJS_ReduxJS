@@ -5,9 +5,9 @@ const TasksList = () => {
   const tasks = useSelector((state) => state.tasks);
 
   return (
-    <section>
-      <h2>Liste des tâches:</h2>
-      <ul>
+    <section className="tasklist">
+      <h2 className="tasklist_title">Liste des tâches:</h2>
+      <ul className="tasklist_list">
         {tasks
           .slice()
           .sort((a, b) => a.checked - b.checked)

@@ -1,0 +1,14 @@
+.header {
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: $color-primary;
+  border-bottom: 2px solid $color-white;
+  margin-bottom: 3rem;
+  &__logo {
+    @include logo;
+    margin: 1.5rem;
+  }
+}
