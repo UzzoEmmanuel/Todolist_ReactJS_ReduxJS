@@ -1,0 +1,15 @@
+.taskcard {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &_title {
+    margin-bottom: 1.5rem;
+  }
+  &_description {
+    padding: 1.5rem;
+    border: 2px solid $color-primary;
+    border-radius: 10px;
+    background-color: $color-white;
+  }
+}

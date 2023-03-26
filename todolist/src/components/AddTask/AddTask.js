@@ -22,10 +22,11 @@ const AddTask = () => {
   };
 
   return (
-    <section>
-      <h2>Tâche à ajouter:</h2>
-      <form onSubmit={handleAddNewTask}>
+    <section className="addtask">
+      <h2 className="addtask_title">Tâche à ajouter:</h2>
+      <form className="addtask_form" onSubmit={handleAddNewTask}>
         <input
+          className="addtask_form__input"
           type="text"
           placeholder="titre"
           required
@@ -33,12 +34,15 @@ const AddTask = () => {
           onInput={(event) => setTitle(event.target.value)}
         />
         <input
+          className="addtask_form__input"
           type="text"
           placeholder="description"
           description={description}
           onInput={(event) => setDescription(event.target.value)}
         />
-        <button type="submit">Ajouter</button>
+        <button className="addtask_form__button" type="submit">
+          Ajouter
+        </button>
       </form>
     </section>
   );

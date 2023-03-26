@@ -1,9 +1,8 @@
 const TaskCard = ({ title, description }) => {
-  console.log(title, description);
   return (
-    <div>
-      <h2>{title}</h2>
-      <p>{description}</p>
+    <div className="taskcard">
+      <h2 className="taskcard_title">{title}</h2>
+      <p className="taskcard_description">{description}</p>
     </div>
   );
 };
